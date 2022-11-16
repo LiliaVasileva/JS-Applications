@@ -30,6 +30,7 @@ function onNavigate(event){
         const id = event.target.id;
         const view = views[id];
         if (typeof view == 'function') {
+            document.querySelector('main').replaceChildren();
             view();
         }
     }
